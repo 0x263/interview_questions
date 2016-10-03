@@ -1,5 +1,5 @@
 """
-Given a string 'abcdabcdf', you're code should return the maximum substring which
+Given a string 'abcdabcdf', your code should return the maximum substring which
 has zero repetition in the substring. So in this example it would be 'abcdf'. If
 there are 2 substrings with same length return the first one.
 """
@@ -40,4 +40,5 @@ def max_substring(text):
 if __name__ == "__main__":
     sample = 'abcdabcdf'
     sample2 = 'bbbbbbbbc'
-    print(max_substring(sample2))
+    sample3 = 'abbbb'
+    print(max_substring(sample3))
