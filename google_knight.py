@@ -1,10 +1,8 @@
 """
 Given a 8 x 8 chess board, find the minimum number of moves required to move
 from source to destination given you can only move like a knight.
-That is move only in L motions.
+That is move only in L motions. The chess board is indexed from 0 to 63.
 """
-
-import math
 
 
 def answer(src, dest):
