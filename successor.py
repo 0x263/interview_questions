@@ -50,7 +50,7 @@ def test():
     seven.left = six
     seven.right = eight
 
-    print(successor(five, three))
+    print(successor(five, three))  # should return 4.
 
 if __name__ == "__main__":
     test()
