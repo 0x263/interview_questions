@@ -11,46 +11,53 @@ class Node:
         self.right = None
 
 
-def successor(root, node):
-    ans = None
-    wrapper(root, node, False, ans)
-    return ans
+class Solution:
 
+    def __init__(self):
+        self.ans = None
 
-def wrapper(root, node, flag, ans):
-    if not root:
+    def successor(self, root, node):
+        self.wrapper(root, node, False)
+        return self.ans
+
+    def wrapper(self, root, node, flag):
+        if not root:
+            return
+
+        self.wrapper(root.left, node, flag)
+
+        if flag:
+            self.ans = root.data
+            print(self.ans)
+
+        if root == node:
+            flag = True
+            print(root.data)
+
+        self.wrapper(root.right, node, flag)
+
         return
 
-    wrapper(root.left, node, flag, ans)
-    if flag:
-        ans = root.data
+    def test(self):
+        one = Node(1)
+        two = Node(2)
+        three = Node(3)
+        four = Node(4)
+        five = Node(5)
+        six = Node(6)
+        seven = Node(7)
+        eight = Node(8)
 
-    if root.data == node.data:
-        flag = True
+        five.left = three
+        five.right = seven
+        three.left = two
+        three.right = four
+        two.left = one
+        seven.left = six
+        seven.right = eight
 
-    wrapper(root.right, node, flag, ans)
-    return
-
-
-def test():
-    one = Node(1)
-    two = Node(2)
-    three = Node(3)
-    four = Node(4)
-    five = Node(5)
-    six = Node(6)
-    seven = Node(7)
-    eight = Node(8)
-
-    five.left = three
-    five.right = seven
-    three.left = two
-    three.right = four
-    two.left = one
-    seven.left = six
-    seven.right = eight
-
-    print(successor(five, three))  # should return 4.
+        print(self.successor(five, three))  # should return 4.
 
 if __name__ == "__main__":
-    test()
+    sol = Solution()
+    sol.test()
