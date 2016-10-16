@@ -19,7 +19,7 @@ The solutions may not be the most elegant or optimal.
 ## Problem Topics
 **License to Hack (150 points)**: String Manipulation
 
-**Anagram Count (250 points)**: String Manipulation and Data Structures
+**Anagram Count (250 points)**: String Manipulation & Data Structures
 
 **Chemistry 101 (250 points)**: Data Structures
 
